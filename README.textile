@@ -1,0 +1,11 @@
+
+h1. Survey Done Notification System
+
+The site user will go to the following URL to make the survey:
+	* {{ survey.link }}?email={% encrypt user.email %}&user_id={{ user.id }}&survey_id={{ survey.id }}
+	* eg.: http://www.survey01link.com/?email=jle6rijo@ec5mple.com&user_id=2&survey_id=1
+
+When the survey has been finnished the survey system must make a pixel-tracking with the following URL:
+	* {{ site_url }}/survey_done?user_id={{ user.id }}&survey_id={{ survey.id }}
+	* eg.: http://www.onlycashsurveys.com/survey_done?user_id=2&survey_id=1
+	* Important: with the same user_id and survey_id passed in the link of the user

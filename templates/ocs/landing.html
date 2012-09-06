@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load site_tags %}
+{% block content %}
+<p>
+	Take a brief survey and earn at least $1.00 through PayPal!
+	Take many surveys daily!
+	Get paid weekly!
+</p>
+<form action="/validate" method="post">
+	{% csrf_token %}
+	<label for="password">Enter the password:</label><br />
+	<input type="password" name="password" id="password" />
+	<input type="submit" value="Take a survey!">
+</form>
+<p>
+	Not a member? Click <a href="/registration">here</a> to register for free.
+</p>
+{% endblock %}
+{% block quote %}
+Quote of the day: {% quote_of_day %}
+{% endblock %}

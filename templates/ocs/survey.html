@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load site_tags %}
+{% block content %}
+<p>Hi {{ user.name }} !!</p>
+<p>This survey is worth $ {{ survey.value }} !!</p>
+<p>Remember, you must complete the survey before you are given credit for the Survey.</p>
+<p><a href="{{ survey.link }}?email={% encrypt user.email %}&user_id={{ user.id }}&survey_id={{ survey.id }}"><img src="{% static "surveyButton.jpg" %}" alt="Take a Survey!"/></a></p>
+{% endblock %}

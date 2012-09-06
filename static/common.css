@@ -1,0 +1,80 @@
+body{
+background-color:#658352;
+background:#658352;
+font:Arial, Helvetica, sans-serif;
+font-size:14px;
+}
+
+A:link {text-decoration: none; color:#CCCCCC;}
+A:visited {text-decoration: none; color:#CCCCCC;}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: white;}
+
+#main{
+background-color: #FFFFFF;
+height:30em;
+width:60em;
+margin-left:22%;
+
+margin-top:3em;
+padding:15px;
+border:ridge;
+border:#CCCC99;
+}
+#logo{
+float:left;
+font-family:Arial, Helvetica, sans-serif;
+font-weight:bold;
+font-size:47px;
+}
+#freebies{
+width:8em;
+float:right;
+margin-right:11em;
+}
+#mainContent{
+background-color:#e4efde;
+height:21em;
+width:38em;
+padding-left:15px;
+padding-right:15px;
+float:left;
+}
+.style3 {color: #3f48cc}
+.style4 {color: #7092be}
+.style5 {font-style: italic}
+
+#freebiesContent{
+border:thin #000000;
+
+padding:10px;
+float:right;
+height:15em;
+width:15em;
+}
+
+.white{
+background-color:#FFFFFF; height:250px;
+}
+
+#footer{
+color:#CCCCCC;
+margin-left:45%;
+
+}
+
+#quote{
+font-size:22px;
+font-weight:bold;
+margin-top:8em;
+}
+
+.style6 {color: #4E653F}
+
+form input[type=submit] {
+	background : url("surveyButton.jpg") no-repeat center center;
+	width : 142px;
+	height :34px;
+	border : none;
+	color : transparent;
+}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load site_tags %}
+{% block content %}
+<p>
+	Click here to bookmark this page!
+</p>
+<form action="/authenticate" method="post">
+	{% csrf_token %}
+	<label for="email">Enter your <span class="style5"><strong><span class="style3">Pay</span><span class="style4">Pal</span></strong></span> Email:</label>
+	<br />
+	<input name="email" id="email" type="text" border="1" align="left" size="28" />
+	<p>
+		Prove you're not a robot:
+	</p>
+	<span class="validation_error">{{ captcha_response }}</span>
+
+	<script type="text/javascript"
+	src="http://api.recaptcha.net/challenge?k=6Lc3qdUSAAAAAA4aAeRZA_78Hlal_YW-1cUP_jdo"></script>
+
+	<noscript>
+		<iframe src="http://api.recaptcha.net/noscript?k=6Lc3qdUSAAAAAA4aAeRZA_78Hlal_YW-1cUP_jdo"
+		height="300" width="500" frameborder="0"></iframe>
+		<br>
+		<textarea name="recaptcha_challenge_field" rows="3" cols="40">
+            </textarea>
+		<input type="hidden" name="recaptcha_response_field"
+		value="manual_challenge">
+	</noscript>
+	<input type="submit" value="Take a survey!">
+</form>
+{% endblock %}
